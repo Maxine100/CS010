@@ -5,6 +5,7 @@ using namespace std;
 
 const bool CLEAR_SCREEN = true;
 
+/// @brief Utilizes an escape character sequence to clear the screen
 void clearScreen() {
     cout << endl;
 
@@ -17,6 +18,9 @@ void clearScreen() {
     return;
 }
 
+
+/// @brief Draws the provided tic-tac-toe board to the screen
+//  @param board is the tic-tac-toe board that should be drawn
 void drawBoard(const vector < char >&gameBoard) {
     clearScreen();
     for (int i = 0; i < 9; i += 3) {
@@ -31,20 +35,30 @@ void drawBoard(const vector < char >&gameBoard) {
     return;
 }
 
+
+
+/// @brief Fills vector with characters starting at lower case a.
+///
+///     If the vector is size 3 then it will have characters a to c.
+///     If the vector is size 5 then it will have characters a to e.
+///     If the vector is size 26 then it will have characters a to z.
+///
+/// @param v the vector to initialize
+/// @pre-condition the vector size will never be over 26
 void initVector(vector <char> &v) {
-    char letter = 'a';
-    for (int i = 0; i < v.size(); ++i) {
-        v.at(i) = letter;
-        ++letter;
-    }
+
+    // TODO: implement function
     return;
 }
 
+
+/// @brief Converts a character representing a cell to associated vector index
+/// @param the position to be converted to a vector index
+/// @return the integer index in the vector, should be 0 to (vector size - 1)
 int convertPosition(char boardPosition) {
-    
-    int x = boardPosition - 'a';
-    
-    return x;
+
+    // TODO: implement function
+    return -1;
 }
 
 
@@ -55,11 +69,6 @@ int convertPosition(char boardPosition) {
 bool validPlacement(const vector<char>  &gameBoard, int positionIndex) {
 
     // TODO: implement function
-    
-    if (gameBoard.at(positionIndex) != 'X' && gameBoard.at(positionIndex) != 'O' && positionIndex < gameBoard.size() && positionIndex >= 0) {
-        return true;
-    }
-    
     return false;
 }
 
@@ -73,137 +82,52 @@ bool validPlacement(const vector<char>  &gameBoard, int positionIndex) {
 int getPlay(const vector<char> &gameBoard) {
 
     // TODO: implement function
-    char boardPosition = ' ';
-    
-    
+    // char boardPosition = ' ';
+
     cout << "Please choose a position: ";
 
 
     return -1;
 }
 
+
+/// @brief Predicate function to determine if the game has been won
+///
+///     Winning conditions in tic-tac-toe require three marks from same 
+///     player in a single row, column or diagonal.
+///
+/// @param board the current tic-tac-toe board 
+/// @return true if the game has been won, false otherwise
 bool gameWon(const vector<char> &gameBoard) {
-    
-    if ((gameBoard.at(0) == 'X' && gameBoard.at(1) == 'X' && 
-        gameBoard.at(2) == 'X' ) || (gameBoard.at(3) == 'X' && 
-        gameBoard.at(4) == 'X' && gameBoard.at(5) == 'X' )|| 
-        (gameBoard.at(6) == 'X' && gameBoard.at(7) == 'X' && 
-        gameBoard.at(8) == 'X' ) || (gameBoard.at(0) == 'X' && 
-        gameBoard.at(3) == 'X' && gameBoard.at(6) == 'X' ) || 
-        (gameBoard.at(1) == 'X' && gameBoard.at(4) == 'X' && 
-        gameBoard.at(7) == 'X' ) || (gameBoard.at(2) == 'X' && 
-        gameBoard.at(5) == 'X' && gameBoard.at(8) == 'X' ) || 
-        (gameBoard.at(0) == 'X' && gameBoard.at(4) == 'X' && 
-        gameBoard.at(8) == 'X' ) || (gameBoard.at(2) == 'X' && 
-        gameBoard.at(4) == 'X' && gameBoard.at(6) == 'X' )) {
-            return true;
-        }
-    
-    else if ((gameBoard.at(0) == 'O' && gameBoard.at(1) == 'O' && 
-        gameBoard.at(2) == 'O' ) || (gameBoard.at(3) == 'O' && 
-        gameBoard.at(4) == 'O' && gameBoard.at(5) == 'O' )|| 
-        (gameBoard.at(6) == 'O' && gameBoard.at(7) == 'O' && 
-        gameBoard.at(8) == 'O' ) || (gameBoard.at(0) == 'O' && 
-        gameBoard.at(3) == 'O' && gameBoard.at(6) == 'O' ) || 
-        (gameBoard.at(1) == 'O' && gameBoard.at(4) == 'O' && 
-        gameBoard.at(7) == 'O' ) || (gameBoard.at(2) == 'O' && 
-        gameBoard.at(5) == 'O' && gameBoard.at(8) == 'O' ) || 
-        (gameBoard.at(0) == 'O' && gameBoard.at(4) == 'O' && 
-        gameBoard.at(8) == 'O' ) || (gameBoard.at(2) == 'O' && 
-        gameBoard.at(4) == 'O' && gameBoard.at(6) == 'O' )) {
-            return true;
-        }
-        
+
+    // TODO: implement function
     return false;
 }
 
+
+/// @brief Predicate function to determine if the board is full
+/// @param board the current tic-tac-toe board 
+/// @return true iff the board is full (no cell is available)
 bool boardFull(const vector<char> &gameBoard) {
-    
-    if (gameBoard.at(0) != 'a' && gameBoard.at(1) != 'b' && 
-        gameBoard.at(2) != 'c' && gameBoard.at(3) != 'd' && 
-        gameBoard.at(4) != 'e' && gameBoard.at(5) != 'f' && 
-        gameBoard.at(6) != 'g' && gameBoard.at(7) != 'h' && 
-        gameBoard.at(8) != 'i') {
-            return true;
-        }
-        
+
+    // TODO: implement function
     return false;
 }
 
 
 // Global constants for player representation
-const int PLAYER1 = 0;
-const int PLAYER2 = 1;
+// const int PLAYER1 = 0;
+// const int PLAYER2 = 1;
 
 int main() {
     // Variables that you may find useful to utilize
-    vector<char> v(9);
-    vector<char> gameBoard(9);
-    char letter;
+    // vector<char> gameBoard(9);
     // int curPlay;
     // int whosTurn = PLAYER1; // Player 1 always goes first and is 'X'
 
     /// TODO: Initialize board to empty state
 
     /// TODO: Display empty board
-    
-    initVector(v);
-    gameBoard = v;
-    drawBoard(gameBoard);
-    
-    cout << "Please choose a position: " << endl;
-    
-    cin >> letter;
-    
-    gameBoard.at(convertPosition(letter)) = 'X';
-    
-    drawBoard(gameBoard);
-    
-    cout << "Please choose a position: " << endl;
-    
-    cin >> letter;
-    
-    gameBoard.at(convertPosition(letter)) = 'O';
-    
-    drawBoard(gameBoard);
-    
-    cout << "Please choose a position: " << endl;
-    
-    cin >> letter;
-    
-    cout << "Please choose a position: " << endl;
-    
-    cin >> letter;
-    
-    gameBoard.at(convertPosition(letter)) = 'X';
-    
-    drawBoard(gameBoard);
-    
-    cout << "Please choose a position: " << endl;
-    
-    cin >> letter;
-    
-    gameBoard.at(convertPosition(letter)) = 'O';
-    
-    drawBoard(gameBoard);
-    
-    cout << "Please choose a position: " << endl;
-    
-    cin >> letter;
-    
-    gameBoard.at(convertPosition(letter)) = 'X';
-    
-    drawBoard(gameBoard);
-    
-    cout << "Please choose a position: " << endl;
-    
-    cin >> letter;
-    
-    gameBoard.at(convertPosition(letter)) = 'O';
-    
-    drawBoard(gameBoard);
-    
-    cout << "PLAYER 2 WINS!" << endl;
 
 
     /// TODO: Play until game is over
