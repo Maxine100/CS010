@@ -7,7 +7,6 @@ int main() {
 	int trunkWidth;
 	int trunkHeight;
 	int leavesWidth;
-	int leavesHeight;
 
 	cout << "Enter trunk height: ";
 	cin >> trunkHeight;
@@ -28,7 +27,7 @@ int main() {
 		cin >> leavesWidth;
 	}
 
-	leavesHeight = leavesWidth / 2 + 1;
+	int leavesHeight = leavesWidth / 2 + 1;
 
 	cout << endl;
 
