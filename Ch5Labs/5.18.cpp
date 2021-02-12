@@ -18,7 +18,7 @@ int main() {
 		if (userInput / 10 == userInput % 10) {
 			cout << userInput << " ";
 		}
-		else if (userInput / 1- ! userInput % 10) {
+		else if (userInput / 10 ! userInput % 10) {
 			cout << userInput << " ";
 			while (userInput / 10 != userInput % 10) {
 				--userInput;
