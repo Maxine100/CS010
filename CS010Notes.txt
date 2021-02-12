@@ -1,0 +1,287 @@
+Ch.2 Variables/Assignments
+- In a program, a variable is a named item.
+- An assignment statement assigns a variable with a value.
+- Increasing a variable's value by 1 is known as incrementing the variable.
+- A variable declaration is a statement that declares a new variable, specifying the variable's name and type.
+- An assignment statement assigns the variable on the left-side of the = with the current value of the right-side expression.
+- An identifier is a name created by a programmer for an item like a variable or function.
+- A reserved word is a word that is part of the language, like int, short, or double; aka keyword.
+- Reserved words can't be used as identifiers.
+- C++ reserved words or keywords:
+    alignas   (since C++11)
+    alignof   (since C++11)
+    and
+    and_eq
+    asm
+    auto
+    bitand
+    bitor
+    bool
+    break
+    case
+    catch
+    char
+    char16_t   (since C++11)
+    char32_t   (since C++11)
+    class
+    compl
+    const
+    constexpr   (since C++11)
+    const_cast
+    continue
+    decltype   (since C++11)
+    default
+    delete
+    do
+    double
+    dynamic_cast
+    else
+    enum
+    explicit
+    export
+    extern
+    false
+    float
+    for
+    friend
+    goto
+    if
+    inline
+    int
+    long
+    mutable	namespace
+    new
+    noexcept   (since C++11)
+    not
+    not_eq
+    nullptr   (since C++11)
+    operator
+    or
+    or_eq
+    private
+    protected
+    public
+    register
+    reinterpret_cast
+    return
+    short
+    signed
+    sizeof
+    static
+    static_assert   (since C++11)
+    static_cas	struct
+    switch
+    template
+    this
+    thread_local   (since C++11)
+    throw
+    true
+    try
+    typedef
+    typeid
+    typename
+    union
+    unsigned
+    using
+    virtual
+    void
+    volatile
+    wchar_t
+    while
+    xor
+    xor_eq
+- An expression is a combination of items.
+- A literal is a specific value in code.
+- An operator is a symbol that performs a built-in calculation.
+- An expression evaluates to a value.
+- Floating-point # is real number. Floating-point refers to decimal points being able to appear anywhere (float) in #.
+- A variable declared as double stores a floating-point #.
+- A floating-point literal is # with fraction part.
+- Dividing a nonzero floating-point # by 0 results in infinity or -infinity. Outputs inf or -inf.
+- If dividend and divisor in floating-point division are both 0, division results in "not a number"; outputs nan.
+- A floating-point literal using scientific notation is written using an e preceding the power of 10 exponent.
+- Each memory location is composed of bits; processor stores # using base 2, known as binary #.
+- A standard math library has about 20 math operations.
+- A function is a list of statements executed by invoking function's name, known as function call.
+- Function input values are called arguments.
+- Math library is <cmath>.
+- Common math functions are sqrt(x), pow(x, y), fabs(x).
+- Type conversion is conversion of one data type to another.
+- Compiler automatically performs several common conversions between int and double types, such authomatic conversion known as implicit conversion.
+- A type cast explicityly converts a value of one type to another type; use static_cast<type>(expression).
+- Char variables store numbers.
+- ASCII is early standard for encoding characters as numbers.
+- The language uses an escape sequence if there is no visible character.
+- Common escape sequences:
+    - Newline: \n
+    - Tab: \t
+    - Single quote: \'
+    - Double quote: \"
+    - Backslash: \\
+- A string is a sequence of characters.
+- A string literal surrounds a character sequence with double quotes.
+- User #include <string>.
+- The function getline(cin, stringVar) gets all user text on the current input line up to the new newline character (removed from input but not put in stringVar).
+- const keeps a variable's value from changing.
+- An initialized variable whose value cannot change is called a constant variable.
+- Integer numeric data types:
+    - char, short, long, long long, int.
+- Floating-point numeric data types:
+    - float, double.
+- Overflow occurs when value being assigned to variable is greater than maximum value variable can store.
+_________________________________________________________________
+_________________________________________________________________
+Ch.3 Branches
+- A branch is a program path taken only if an expression's value is true.
+- A logical operator treats operands as being true or false and evaluates to true or false.
+_________________________________________________________________
+_________________________________________________________________
+Ch.4 Strings/Loops 1
+- Each string character has a position number called an index starting with 0.
+- s1.append(s2) appends s2 to s1.
+- find(item) returns index of first item occurrence, else returns string::npos.
+- substr(index, len) returns substring starting at index and having len characters.
+- push_back(c) appends c to end of string.
+- insert(indx, subStr) inserts string subStr starting at index indx.
+- replace(indx, num, subStr) replaces characters at indices indx to indx+num-1 with copy of subStr.
+- Including cctype library via #include <cctype> provides access to several functions for working with characters. ctype stands for character type.
+- isalpha(c) returns true if c is alphabetic.
+- isdigit(c) returns true if c is digit.
+- isspace(c) returns true if c is whitespace.
+- toupper(c) changes c to uppercase.
+- tolower(c) changes c to lowercase.
+- A loop is a program construct that repeatedly executes the loop's statements while loop's expression is true.
+- Each time through a loop's statements is called an iteration.
+- A while loop is a program construct that repeatedly executes a list of sub-statements while the looop's expression evaluates to true.
+- An infinite loop is a loop that never stops iterating.
+- A sentinel value is a special value indicating the end of a list.
+_________________________________________________________________
+_________________________________________________________________
+Ch.5 Loops 2
+- A for loop is a loop with three parts at the top: a loop variable initialization, a loop expression, and a loop variable update.
+    - for (initialExpression; conditionExpression; updateExpression) {
+        
+        }
+- ++ is known as the increment operator; -- is the decrement operator.
+- ++i (prefix) increments i first then evaluates the result, while i++ (postfix) evaluates the result first and then incremenets i.
+- The rand() function returns a random integer each time the function is called in the range 0 to RAND_MAX.
+- The integers generated by rand() are known as pseudo-random because each time a program runs, calls to rand() yield the same sequence of values.
+- For the first call to rand() the function uses a built-in integer known as the seed.
+- The default seed is 1; the seed can be changed using the function srand().
+- One way to get a different seed for each program run is to use the current time as the seed; time().
+- A nested loop is a loop that appears in the body of another loop. Nested loops are commonly referred to as the inner loop and outer loop.
+- A do-while loop is a loop construct that first executes the loop body's statements, then checks the loop condition.
+    - do {
+        
+        } while (loopExpression);
+_________________________________________________________________
+_________________________________________________________________
+Ch.6 Functions 1
+- A function is a named list of statements.
+    - A function definition consists of the new function's name and a block of statements.
+    - A function call is an invocation of a function's name, causing the function's statements to execute.
+- A parameter is a functino input specified in a functino definition.
+- An argument is a value provided to a function's parameter during a function call.
+- A function may return one value using a return statement.
+- A return type of void indicates that a function doesn't return any value.
+_________________________________________________________________
+_________________________________________________________________
+Ch.7 Functions 2
+- Each function call creates a new set of local variables, forming part of what is known as a stack frame. A return causes those local variables to be discarded.
+- Normal parameters are pass by value, meaning the argument's value is copied into a local variable for the parameter.
+- A pass by reference parameter does not create a local copy of the argument, but rather the parameter refers directly to the argument variable's memory location. Append & to parameter's data type.
+- A reference variable is a variable type that refers to another variable.
+- The name of a defined variable or function item is only visible to part of a program, known as the item's scope.
+- A variable declared outside any function is called a global variable.
+- A function declaration specifies the function's return type, name, and parameters, ending with a semicolon.
+- A function declaration is aka a function prototype.
+- The preprocessor is a tool that scans the file from top to bottom looking for any lines that begin with #, a hash symbol.
+_________________________________________________________________
+_________________________________________________________________
+Ch.8 Vectors 1
+- An array is a special variable having one name but storing a list of data items with each item being directly accessible.
+- Some languages use vectors.
+- Each item in an array is an element.
+- In an array, each element's location number is the index.
+- A vector is an ordered list of items of a given data type.
+- Each item in a vector is an element.
+- Vector declaration: vector<dataType> vectorName(numElements);
+- A vector's size() function returns the number of elements.
+- A vector's elements are automatically 0 during declaration.
+- vector<int> myVector(#1, #2); creates a vetor named myVector with #1 elements each with value #2.
+- vector<int> myVec = {1, 2, 3}; creates a vector of 3 integer elements initialized with values 1, 2, and 3.
+- Use push_back to append a new element to the end of an existing vector.
+- back() returns vector's last element.
+- pop_back() removes last element.
+- Resize vectors with resize(#).
+_________________________________________________________________
+_________________________________________________________________
+Ch.9 Vectors 2
+- The vector copy operation performs an element-by-element copy of a vector.
+    - vectorB = vectorA
+- The == operator compares vector's element-by-element, called a vector equality operation.
+_________________________________________________________________
+_________________________________________________________________
+Ch.10 The Internet and the Web
+- The Internet is a commection of billions of computers using the Internet Protocol's communication rules.
+- A computer communicates via the Internet by sending a packet, comtaining information like an address for a destination computer, the data size, and the data.
+- The basic low-level rules for communicating data over the Internet are called the Internet Protocol (IP).
+- A router is a specialized computer in a network that receives a packet from a computer/router and sends that packet to another computer/router on a path towards the packet's destination.
+- Most people use an Internet Service Provider (ISP), a company that provides connections to the Internet, usually via cable lines, digital phone lines, or satellite.
+- A modem is used for communication between a home/office computer and the ISP's computers, which connects to the Internet.
+- An IP address is a computer's unique address on the Internet.
+- A typical address is 32 bits, divided into four 8-bit groups, each group often written as a decimal number.
+- All websites could be reached by the computer system's IP address.
+- A domain name is a name for an IP address, like cnn.com.
+- When a computer sends a packet using a domain name over the Internet, the first step is to contact a DNS server to convert the domain name to an IP address.
+- DNS is short for Domain Name System.
+- Some computers have a static IP address, meaning the address doesn't change.
+- Some computers have a dynamic IP address.
+- Computers are typically assigned a new dynamic IP address each time it is turned on or is newly connected to the Internet.
+- An ISP allows computers to connect with the Internet.
+- Sending a computer's data requires electrically combining with a different electronic signal capable of travelling over the ISP's line, a process known as modulation.
+- A modem (modulator/demodulator) performs the required combining/uncombining of computer data and electrical signals over an ISP's line.
+- A modem typically connects to a computer using a communcation protocal known as Ethernet over an Ethernet cable.
+- A router is commonly placed after a modem to route packets from the ISP's line to the appropriate computer among many in a home/office and sometimes routing directly between those computers.
+- A Wi-Fi router uses wireless technology to communicate with computing devices over short distances of up to 66 feet.
+- Wi-Fi refers to a wireless computer networking standard known as IEEE 802.11.
+- If home network fails, turn off stuff starting from farthest from the wall. Then turn on starting closest to the wall.
+- Computer networks evolved in the 60s to let computers communicate info with each other.
+- The Internet is the most popular computer network today.
+- FTP (file transfer protocol0 was an early way for transferring files.
+- The web is a more convenient way for computers to communicate files.
+- The web involves:
+    - Text files, known as HTML files, containing links to other text files.
+    - A program, known as a browser, for viewing HTML files.
+    - A set of rules, known as the HTTP protocol, for transferring HTML files among computers.
+- HTML stands for hyper-text markup language.
+    - Hyper-text means the text has links to other text and other stuff.
+- HTTP stands for hyper-text transfer protocol.
+- The web was originally called the World Wide Web, hence www.
+- The web has over 1 billion websites and 1 trillion web pages.
+- A web search seeks web pages that best match user-typed words.
+- A search engine is a website that does web searches.
+- A search engine determines the "best" matching pages using web-search matching criteria.
+- A default search engine is the engine a browser uses for searches done via the browser's search box or URL box.
+- For speed, search engines pre-visit web pages and create an index of words pointing to specific pages.
+- A web crawler is a program that pre-visits web pages to build an index.
+- Using quotes searches for those words in that order.
+- Using a minus before a word excludes sites that have that word.
+- Including site:.ending restricts searches to domains with that ending.
+- Including filetype:type limits results to files of that type.
+- Searching on scholar.google.com searches academic articles rather than the web.
+- A domain name is a name for an IP address.
+- Domain names and IP addresses are managed by ICANN (Internet Corporation for Assigned Names and Numbers).
+- A domain name registrar is a company authorized to reserve domain names.
+- Domain names are hierarchical.
+- A domain name belongs to one of numerous top-level domains like .com, .net, .org, .edu, and .gov.
+- There are second-level domains, usually an organization's name.
+- Third-level and further level domains refer to sub-computer systems local to an organization, like cs.stanford.edu or www.
+- Cybersquatting is registering a domain name in the hopes of selling later for a profit.
+- Domain names are most commonly seen in URLs.
+- A URL (Uniform Resource Locator) is the location of a file on the web.
+- The http part of the URL refers to hyper-text transfer protocol used for communicating web pages.
+- https uses encryption for secure transfers such as passwords or credit card numbers.
+- If a web server is reached but the specific requested page isn't found, the server returns a 404 error message, code number for page not found.
+- A link on a web page is text that can be clicked to jump to another web page.
+- CSS (Cascading Style Sheets) is language that styles web pages.
