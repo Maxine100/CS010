@@ -1,4 +1,4 @@
-// This program converts an integer ot binary and reverses it.
+// This program converts an integer to binary and reverses it.
 
 #include <iostream>
 #include <string>
