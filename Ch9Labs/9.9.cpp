@@ -33,7 +33,6 @@ int main() {
 	}
 
 	return 0;
-
 }
 
 bool IsVectorEven(const vector<int> &myVec) {

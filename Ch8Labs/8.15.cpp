@@ -30,7 +30,6 @@ int main() {
 	cout << endl;
 
 	return 0;
-
 }
 
 int GetMinimumInt(vector<int> listInts) {
